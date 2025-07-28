@@ -1,0 +1,24 @@
+.button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#orange {
+    background-color: orange;
+}
+#white {
+    background-color: white;
+}
+#green {
+    background-color: green;
+}
+#blue {
+    background-color: blue;
+}
+#gray {
+    background-color: gray;
+}
