@@ -1,0 +1,56 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card container */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  background-color: #ddd; 
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.link-out {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-out:hover {
+  text-decoration: underline;
+}
