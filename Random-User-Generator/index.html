@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <title>Random User Generator</title>
+</head>
+
+<body>
+    <div class="user-profile">
+        <div class="profile-top">
+            <img id="image" src="https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg" height="150px">
+            <div class="profile-info">
+                <span id="name">Name</span>
+                <span>|</span>
+                <span id="gender">Gender</span>
+            </div>
+        </div>
+
+        <div class="profile-bottom">
+            <div class="profile-info">
+               <span class="material-icons">email</span>
+               <span id="email">Email</span>
+            </div>
+
+            <div class="profile-info">
+                <span class="material-icons">call</span>
+                <span id="phone">Phone</span>
+            </div>
+
+            <div class="profile-info">
+                <span class="material-icons">location_on</span>
+                <span id="location">Country</span>
+            </div>
+            
+        </div>
+    </div>
+    <button onclick={getRandomUser()}>New User</button>
+</body>
+<script src="script.js"></script>
+
+</html>
