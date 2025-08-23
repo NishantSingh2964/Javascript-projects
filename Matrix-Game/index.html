@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Matrix Game</title>
+</head>
+
+<body>
+
+  <div class="side-menu" id="sideMenu">
+    
+    <button class="music"><i class="fa-solid fa-music"></i></i></button>
+    <button class="reset"><i class="fa-solid fa-rotate-left"></i></button>
+    <button class="reset"><i class="fa-solid fa-arrow-left"></i></button>
+  </div>
+
+  <div id="helpPopup" class="help-popup">
+    <div class="help-content">
+      <h1>How to Play</h1>
+      <ul>
+        <li>🎯 Objective: Match the correct shape and color tile from the right board to its correct position on the left grid.
+        </li>
+      </ul>
+      <button id="gotItBtn">Got it</button>
+    </div>
+  </div>
+  
+  
+  <div class="container" id="mainContainer">
+    <div class="top-bar">
+      <div class="left-controls">
+        <button id="pauseBtn"><i class="fa-solid fa-pause" id="ctrlIcon"></i></button>
+      </div>
+      <button id="timerBtn"></button>
+      <button><i class="fa-solid fa-question"></i></button>
+    </div>
+    <!-- Left Grid -->
+    <div class="support">
+      <div class="grid" id="drop-grid">
+        <div></div>
+        <div class="header-color color-green"></div>
+        <div class="header-color color-yellow"></div>
+        <div class="header-color color-pink"></div>
+        <div class="header-color color-blue"></div>
+
+        <div class="cell">
+          <div class="shape-outline circle"></div>
+        </div>
+        <div class="cell black-cell droppable" data-shape="circle" data-color="green"></div>
+        <div class="cell black-cell droppable" data-shape="circle" data-color="yellow"></div>
+        <div class="cell black-cell droppable" data-shape="circle" data-color="pink"></div>
+        <div class="cell black-cell droppable" data-shape="circle" data-color="blue"></div>
+
+        <div class="cell">
+          <div class="triangle"></div>
+        </div>
+        <div class="cell black-cell droppable" data-shape="triangle" data-color="green"></div>
+        <div class="cell black-cell droppable" data-shape="triangle" data-color="yellow"></div>
+        <div class="cell black-cell droppable" data-shape="triangle" data-color="pink"></div>
+        <div class="cell black-cell droppable" data-shape="triangle" data-color="blue"></div>
+
+        <div class="cell">
+          <div class="shape-outline square"></div>
+        </div>
+        <div class="cell black-cell droppable" data-shape="square" data-color="green"></div>
+        <div class="cell black-cell droppable" data-shape="square" data-color="yellow"></div>
+        <div class="cell black-cell droppable" data-shape="square" data-color="pink"></div>
+        <div class="cell black-cell droppable" data-shape="square" data-color="blue"></div>
+
+        <div class="cell">
+          <div class="cross"></div>
+        </div>
+        <div class="cell black-cell droppable" data-shape="cross" data-color="green"></div>
+        <div class="cell black-cell droppable" data-shape="cross" data-color="yellow"></div>
+        <div class="cell black-cell droppable" data-shape="cross" data-color="pink"></div>
+        <div class="cell black-cell droppable" data-shape="cross" data-color="blue"></div>
+
+        <div class="cell">
+          <div class="star"></div>
+        </div>
+        <div class="cell black-cell droppable" data-shape="star" data-color="green"></div>
+        <div class="cell black-cell droppable" data-shape="star" data-color="yellow"></div>
+        <div class="cell black-cell droppable" data-shape="star" data-color="pink"></div>
+        <div class="cell black-cell droppable" data-shape="star" data-color="blue"></div>
+      </div>
+    </div>
+
+    <!-- Right Shape Board -->
+    <div class="shape-board">
+      <div class="cell shape-tile" draggable="true" data-shape="circle" data-color="pink">
+        <div class="shape-filled filled-circle" style="background:#f25987"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="star" data-color="pink">
+        <div class="shape-filled filled-star" style="background:#f25987"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="cross" data-color="green">
+        <div class="shape-filled filled-cross" style="color:#c4cf3f"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="star" data-color="green">
+        <div class="shape-filled filled-star" style="background:#c4cf3f"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="cross" data-color="yellow">
+        <div class="shape-filled filled-cross" style="color:#fbd020"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="square" data-color="pink">
+        <div class="shape-filled filled-square" style="background:#f25987"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="circle" data-color="green">
+        <div class="shape-filled filled-circle" style="background:#c4cf3f"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="circle" data-color="blue">
+        <div class="shape-filled filled-circle" style="background:#22c2f2"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="cross" data-color="pink">
+        <div class="shape-filled filled-cross" style="color:#f25987"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="triangle" data-color="yellow">
+        <div class="shape-filled filled-triangle" style="border-bottom-color:#fbd020"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="square" data-color="yellow">
+        <div class="shape-filled filled-square" style="background:#fbd020"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="triangle" data-color="green">
+        <div class="shape-filled filled-triangle" style="border-bottom-color:#c4cf3f"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="star" data-color="yellow">
+        <div class="shape-filled filled-star" style="background:#fbd020"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="square" data-color="blue">
+        <div class="shape-filled filled-square" style="background:#22c2f2"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="circle" data-color="yellow">
+        <div class="shape-filled filled-circle" style="background:#fbd020"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="triangle" data-color="pink">
+        <div class="shape-filled filled-triangle" style="border-bottom-color:#f25987"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="triangle" data-color="blue">
+        <div class="shape-filled filled-triangle" style="border-bottom-color:#22c2f2"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="square" data-color="green">
+        <div class="shape-filled filled-square" style="background:#c4cf3f"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="cross" data-color="blue">
+        <div class="shape-filled filled-cross" style="color:#22c2f2"></div>
+      </div>
+      <div class="cell shape-tile" draggable="true" data-shape="star" data-color="blue">
+        <div class="shape-filled filled-star" style="background:#22c2f2"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script src="script.js"></script>
+
+  <div id="winnerMessage" class="winner-overlay">
+    <div class="winner-content">
+      <h1>🎉 You Won! 🎉</h1>
+      <button id="newGameBtn">New Game</button>
+    </div>,
+  </div>
+
+</body>
+</html>
+
+</body>
+
+</html>
