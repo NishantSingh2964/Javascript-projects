@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Resume Maker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Maker</h1>
+        <form id="resume-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+            <label for="education">Education:</label>
+            <textarea id="education" name="education" required></textarea><br>
+            <label for="experience">Experience:</label>
+            <textarea id="experience" name="experience" required></textarea><br>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" required></textarea><br>
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+        <div id="resume-output" class="resume-output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
