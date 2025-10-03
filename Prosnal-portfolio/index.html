@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @media only screen and (max-width: 600px) {
+            :root {
+                --primary-color: #080808;
+                --secondary-color: #edf2fc;
+            }
+
+            .light-theme {
+                --primary-color: #edf2fc;
+                --secondary-color: #080808;
+            }
+
+            #header{
+                background-color: var(--primary-color);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">NISHANT</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#protfolio">Portfolio</a></li>
+                    <li><a href="#contect">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()" style="cursor: pointer;"></i>
+                <img src="images/sun.png" id="icon">
+
+            </nav>
+
+            <div class="header-text">
+                <div class="hero ">
+                    <p><span class="main">Welcome to my portfolio</span></p>
+                    <h1>Hey folks, I'm <br><span class="auto-type"></span></h1><br><br>
+                    <a href="images/Nishant's-resume (1).pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div><img src="images/hero-image.png" alt=""></div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ------------------About------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/prof.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>A highly motivated and results-driven software engineer with a strong foundation in Computer
+                        Science and Engineering. Proficient in <span class="logo">c++</span> and web development
+                        technologies. Experienced in <span class="logo">front-end development</span>, project
+                        management, and <span class="logo">problem-solving</span>. Possesses excellent communication,
+                        teamwork, and adaptability skills, eager to contribute to innovative projects in a dynamic
+                        environment.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages:</span><br>C++ (advance), C (Intermediate), JavaScript
+                                (Intermediate), SQL (Intermediate)</li>
+                            <li><span>Web Technologies:</span><br>HTML5, CSS3, java script, React.js, Express js</li>
+                            <li><span>Tools:</span><br>VS Code, Dev C++, my sql workbench, git</li>
+                            <li><span>Core Concepts:</span><br>Object-Oriented Programming (OOPs), Data Structures and
+                                Algorithms (DSA), operating system(OS),Database management system(DBMS)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024-2025<br>Front-End Developer Intern at learn and build</span></li>
+                            <li><span><b>•</b></span> Developed dynamic and responsive frontend applications using
+                                React.js, improving user engagement by 25%.</li>
+                            <li><span><b>•</b></span>Collaborated with backend developers to integrate RESTful APIs,
+                                ensuring seamless data flow and enhancing application performance.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2026</span><br>B-tech(CSE) at Arya Institute of Engineering and Technology,
+                                Jaipur(8.5 cgpa)</li>
+                            <li><span>2021</span><br>Intermediate at GDM public school,dokhra,muzzafarpur (70%)</li>
+                            <li><span>2019</span><br>Dav public school,runni-saipur,sitamarhi(86%)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------Services---------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="sevices-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I specialize in designing visually stunning and highly functional websites that offer seamless
+                        user experiences. My focus is on crafting responsive, intuitive, and aesthetically appealing
+                        designs that not only engage users but also elevate brand presence. From modern UI/UX principles
+                        to structured layouts.</p>
+                    <a href="https://webdesigner.withgoogle.com/">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p> My approach combines creativity with usability, ensuring that designs are not only aesthetically
+                        pleasing but also highly functional. I focus on user-centered design, accessibility, and
+                        seamless interaction flows to create engaging digital experiences. From wireframing and
+                        prototyping to final implementation.</p>
+                    <a href="https://dribbble.com/tags/ui-ux">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>I design intuitive and high-performing web applications that offer seamless user experiences. My
+                        focus is on building responsive, scalable, and visually engaging interfaces that meet modern web
+                        standards. By combining UX/UI principles with front-end technologies, I ensure that each web app
+                        is optimized for accessibility, functionality, and smooth interaction. </p>
+                    <a href="https://dribbble.com/tags/web-app">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------Protfolio------------------ -->
+    <div id="protfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work.jpg">
+
+                    <div class="layer">
+                        <h3>World Atlas</h3>
+                        <p>Explore the world like never before with a dynamic and interactive world atlas. This website
+                            provides detailed maps, geographical insights, and country-specific data</p>
+                        <a href="https://lively-bonbon-aba58a.netlify.app/" target="_blank">Preview <i
+                                class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/NishantSingh2964/World-Atlas">Code<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/edusity.jpg">
+
+                    <div class="layer">
+                        <h3>University website</h3>
+                        <p>Discover everything about the university in one place! This website provides essential
+                            information on academic programs, admissions, faculty, research opportunities, campus life,
+                            and events. </p>
+                        <a href="https://edusity-2.vercel.app/" target="_blank">Preview<i
+                                class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/NishantSingh2964/Edusity" target="_blank">Code<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+
+                    <div class="layer">
+                        <h3>Online Shoaping App</h3>
+                        <p>Shop anytime, anywhere with a seamless online shopping experience! This website offers a wide
+                            range of products—from fashion and electronics to home essentials and more.</p>
+                        <a href="#">Preview<i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/NishantSingh2964/E-Commerce-website" target="_blank">Code<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/NishantSingh2964?tab=repositories" class="btn" target="_blank">See More</a>
+        </div>
+    </div>
+    <!-- -------------------Contect------------------ -->
+
+    <div id="contect">
+        <div class="container">
+            <div class="row">
+                <div class="contect-left">
+                    <h1 class="sub-title">Contect Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>nishantraj7859@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>7859084667</p>
+                    <div class="social-icon">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/nishant-singh2964/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+
+                    <a href="images/Nishant's-resume (1).pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contect-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Emal" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <Button type="submit" class="btn btn2">Submit</Button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright © Nishant.</p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed(".auto-type", {
+        strings: ["Nishant Raj", "Front-end Developer", "Web Developer"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true
+    })
+
+</script>
+
+</html>
